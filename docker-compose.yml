@@ -10,6 +10,7 @@ services:
       POSTGRES_PASSWORD: senha
       POSTGRES_DB: blog-strapi-1
       PGDATA: /var/lib/postgresql/data
+      LANG: pt_BR.utf8
     volumes:
       - c:\Users\Duque\Desktop\postgresql\blog_strapi_api\:/var/lib/postgresql/data
     ports:
