@@ -8,15 +8,17 @@ const axios = require("axios");
  */
 
 module.exports = {
-  async afterCreate(result, data) {
-    axios.post(
-      "https://api.vercel.com/v1/integrations/deploy/prj_os6LpEOFFZ62raj1frgJLnHCOqRX/5fJ9lhpYaD"
-    );
-  },
+  lifecycles: {
+    async afterCreate(result, data) {
+      axios.post(
+        "https://api.vercel.com/v1/integrations/deploy/prj_os6LpEOFFZ62raj1frgJLnHCOqRX/5fJ9lhpYaD"
+      );
+    },
 
-  async afterUpdate(result, params, data) {
-    axios.post(
-      "https://api.vercel.com/v1/integrations/deploy/prj_os6LpEOFFZ62raj1frgJLnHCOqRX/5fJ9lhpYaD"
-    );
+    async afterUpdate(result, params, data) {
+      axios.post(
+        "https://api.vercel.com/v1/integrations/deploy/prj_os6LpEOFFZ62raj1frgJLnHCOqRX/5fJ9lhpYaD"
+      );
+    },
   },
 };
